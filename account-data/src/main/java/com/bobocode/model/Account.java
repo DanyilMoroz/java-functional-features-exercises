@@ -21,5 +21,37 @@ public class Account {
     private Sex sex;
     private LocalDate creationDate;
     private BigDecimal balance = BigDecimal.ZERO;
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public LocalDate getBirthday() {
+        return birthday;
+    }
+
+    public Sex getSex() {
+        return sex;
+    }
+
+    public LocalDate getCreationDate() {
+        return creationDate;
+    }
+
+    public BigDecimal getBalance() {
+        return balance;
+    }
 }
 

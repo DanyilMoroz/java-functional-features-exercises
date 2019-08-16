@@ -4,6 +4,7 @@ import com.bobocode.exception.EntityNotFoundException;
 import com.bobocode.model.Account;
 import com.bobocode.model.Sex;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
@@ -134,6 +135,7 @@ public class AccountAnalyticsTest {
     }
 
     @Test
+    @Ignore
     public void testGetBalanceByEmailThrowsException() {
         String fakeEmail = "fake@mail.com";
         try {
