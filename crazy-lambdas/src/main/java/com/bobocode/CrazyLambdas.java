@@ -199,8 +199,9 @@ public class CrazyLambdas {
      * @return a binary function that receiver predicate and function and compose them to create a new function
      */
     public static BiFunction<IntUnaryOperator, IntPredicate, IntUnaryOperator> functionToConditionalFunction() {
-        throw new UnsupportedOperationException("It's your job to implement this method");
+        //throw new UnsupportedOperationException("It's your job to implement this method");
         // todo
+        return (intUnaryOperator, predicate) -> o -> predicate.test(o) ? intUnaryOperator.applyAsInt(o) : o;
     }
 
     /**
@@ -211,16 +212,20 @@ public class CrazyLambdas {
      * @return a high-order function that fetches a function from a function map by a given name or returns identity()
      */
     public static BiFunction<Map<String, IntUnaryOperator>, String, IntUnaryOperator> functionLoader() {
-        throw new UnsupportedOperationException("It's your job to implement this method"); // todo
+        //throw new UnsupportedOperationException("It's your job to implement this method");
+        // todo
+        return (map, functionName) -> map.containsKey(functionName) ? map.get(functionName) : IntUnaryOperator.identity();
     }
 
     /**
-     * Returns {@link Supplier} of {@link Supplier} of {@link Supplier} of {@link String} "WELL DONE".
+     * Returns {@link Supplier} of {@link Supplier} of {@link Supplier} of {@link String} "WELL DONE!".
      *
      * @return a supplier instance
      */
     public static Supplier<Supplier<Supplier<String>>> trickyWellDoneSupplier() {
-        throw new UnsupportedOperationException("It's your job to implement this method"); // todo
+        //throw new UnsupportedOperationException("It's your job to implement this method");
+        // todo
+        return () -> () -> () -> "WELL DONE!";
     }
 }
 
